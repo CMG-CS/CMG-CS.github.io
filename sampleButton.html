@@ -9,10 +9,11 @@
 </head>
 <body>
 <h1>
-    You have $<span id="total">    </span> in your wallet!
+    You have $<span id="showTotal">    </span> in your wallet!
 </h1>
 
 <p>    Click the button to purchase an item.</p>
+
 
     <button onclick="updateTotal(11)">BUY</button>
 
@@ -20,12 +21,11 @@
 
     <script>
         var total=200;
-        var bank=document.getElementById("total"); 
-        bank.innerHTML = total;
+        document.getElementById("showTotal").innerHTML = total;
 
         function updateTotal(cost) {
             total=total-cost;
-            bank.innerHTML = total;
+            document.getElementById("showTotal").innerHTML =total;
         }
     </script>
 
