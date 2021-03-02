@@ -1,0 +1,34 @@
+<html>
+
+<head>
+<title>Sample JavaScript Button</title>
+<style>
+
+</style>
+
+</head>
+<body>
+<h1>
+    You have $<span id="total">    </span> in your wallet!
+</h1>
+
+<p>    Click the button to purchase an item.</p>
+
+    <button onclick="updateTotal(11)">BUY</button>
+
+
+
+    <script>
+        var total=200;
+        var bank=document.getElementById("total"); 
+        bank.innerHTML = total;
+
+        function updateTotal(cost) {
+            total=total-cost;
+            bank.innerHTML = total;
+        }
+    </script>
+
+</body>
+
+</html>
